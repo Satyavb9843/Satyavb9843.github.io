@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Satya B — Cloud DevOps and SRE Engineer specializing in AWS, Azure, GCP, Kubernetes, Terraform, CI/CD, and automation."
+    content="Satya B — Cloud DevOps and SRE Engineer specializing in cloud infrastructure, automation, Kubernetes, Terraform, CI/CD, and observability."
   />
   <title>Satya B | Cloud DevOps and SRE Engineer</title>
 
@@ -18,7 +18,6 @@
       --muted: #aabbd0;
       --line: rgba(201, 220, 245, 0.16);
       --accent: #2dd4bf;
-      --accent-dark: #0f766e;
       --blue: #60a5fa;
       --max-width: 1180px;
     }
@@ -57,7 +56,7 @@
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
-      background: rgba(8, 17, 31, 0.88);
+      background: rgba(8, 17, 31, 0.9);
       backdrop-filter: blur(14px);
     }
 
@@ -89,7 +88,9 @@
       font-weight: 700;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .project-link a:hover,
+    .contact-card a:hover {
       color: var(--accent);
     }
 
@@ -104,7 +105,8 @@
       gap: 4rem;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .section-label {
       margin: 0 0 1rem;
       color: var(--accent);
       font-size: 0.78rem;
@@ -124,6 +126,12 @@
       margin-bottom: 1.2rem;
       font-size: clamp(2.5rem, 5vw, 4.8rem);
       letter-spacing: -0.055em;
+    }
+
+    h2 {
+      margin-bottom: 0.8rem;
+      font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+      letter-spacing: -0.035em;
     }
 
     .hero-description {
@@ -221,7 +229,7 @@
     }
 
     .profile-image-wrap {
-      width: min(290px, 100%);
+      width: min(270px, 100%);
       aspect-ratio: 1;
       overflow: hidden;
       border: 5px solid rgba(45, 212, 191, 0.55);
@@ -246,20 +254,6 @@
     .section-heading {
       max-width: 720px;
       margin-bottom: 2.3rem;
-    }
-
-    .section-label {
-      margin: 0 0 0.6rem;
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-    }
-
-    h2 {
-      margin-bottom: 0.8rem;
-      font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-      letter-spacing: -0.035em;
     }
 
     .section-heading p {
@@ -298,6 +292,19 @@
       color: var(--muted);
     }
 
+    .project-link {
+      margin-top: 1.2rem !important;
+    }
+
+    .project-link a {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .project-link a:hover {
+      text-decoration: underline;
+    }
+
     .skills {
       display: flex;
       flex-wrap: wrap;
@@ -315,7 +322,8 @@
       font-weight: 700;
     }
 
-    .timeline {
+    .timeline,
+    .education-grid {
       display: grid;
       gap: 1.15rem;
     }
@@ -345,14 +353,9 @@
       margin-top: 0.45rem;
     }
 
-    .education-grid {
-      display: grid;
-      gap: 1rem;
-    }
-
     .education-item {
       display: grid;
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 170px 1fr;
       gap: 1.2rem;
       padding: 1.35rem;
       border-left: 3px solid var(--accent);
@@ -472,9 +475,9 @@
           </p>
 
           <p class="hero-intro">
-            I'm Satya B, a Cloud Engineer in Chicago with 5+ years across Linux
-            systems administration, DevOps automation, site reliability engineering,
-            and cloud infrastructure.
+            Cloud engineer with experience in Linux systems administration,
+            DevOps automation, site reliability engineering, cloud infrastructure,
+            Kubernetes, CI/CD, Terraform, and observability.
           </p>
 
           <div class="hero-actions">
@@ -531,9 +534,8 @@
           <p class="section-label">ABOUT</p>
           <h2>Cloud infrastructure and delivery automation</h2>
           <p>
-            Experienced with AWS, Azure, GCP, Terraform, Ansible, Kubernetes,
-            CI/CD pipelines, monitoring, incident response, cloud security,
-            and Linux administration.
+            Build, operate, automate, secure, and monitor cloud environments
+            across AWS, Azure, and GCP using reliable DevOps practices.
           </p>
         </div>
 
@@ -541,16 +543,16 @@
           <article class="card">
             <h3>Cloud and Infrastructure</h3>
             <p>
-              Build, operate, secure, and troubleshoot cloud environments across
-              AWS, Azure, and Google Cloud Platform.
+              Experience with AWS, Azure, GCP, Linux administration, networking,
+              virtual machines, IAM, storage, and scalable cloud services.
             </p>
           </article>
 
           <article class="card">
             <h3>Automation and Reliability</h3>
             <p>
-              Automate repeatable operations with infrastructure as code, CI/CD,
-              scripting, observability, and incident-response practices.
+              Automation through Terraform, Ansible, Python, Bash, CI/CD,
+              Kubernetes, monitoring, alerting, incident response, and RCA.
             </p>
           </article>
         </div>
@@ -579,39 +581,113 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-label">PROJECTS</p>
-          <h2>Featured work</h2>
+          <h2>GitHub projects</h2>
+          <p>
+            Hands-on cloud, DevOps, infrastructure automation, Kubernetes,
+            CI/CD, and observability projects.
+          </p>
         </div>
 
         <div class="project-grid">
           <article class="card">
-            <h3>Infrastructure as Code</h3>
+            <h3>AWS Terraform VPC Module</h3>
             <p>
-              Terraform and ARM Template workflows for repeatable cloud infrastructure
-              provisioning and configuration management.
+              Reusable Terraform module for provisioning AWS VPC infrastructure,
+              including subnets, route tables, internet gateways, and security controls.
+            </p>
+            <p class="project-link">
+              <a
+                href="https://github.com/Satyavb9843/aws-terraform-vpc-module"
+                target="_blank"
+                rel="noopener"
+              >
+                View repository →
+              </a>
             </p>
           </article>
 
           <article class="card">
-            <h3>Kubernetes Deployments</h3>
+            <h3>Azure IaC Provisioning</h3>
             <p>
-              Container deployment, troubleshooting, rollout, and rollback patterns
-              across Amazon EKS and Google Kubernetes Engine.
+              Infrastructure-as-code templates and automation for provisioning
+              Azure resources consistently across environments.
+            </p>
+            <p class="project-link">
+              <a
+                href="https://github.com/Satyavb9843/azure-iac-provisioning"
+                target="_blank"
+                rel="noopener"
+              >
+                View repository →
+              </a>
             </p>
           </article>
 
           <article class="card">
-            <h3>CI/CD Automation</h3>
+            <h3>Kubernetes EKS and GKE Manifests</h3>
             <p>
-              Continuous integration and deployment workflows using Jenkins,
-              GitHub Actions, AWS CodePipeline, and AWS CodeBuild.
+              Kubernetes deployment manifests and configuration examples for
+              Amazon EKS and Google Kubernetes Engine workloads.
+            </p>
+            <p class="project-link">
+              <a
+                href="https://github.com/Satyavb9843/k8s-eks-gke-manifests"
+                target="_blank"
+                rel="noopener"
+              >
+                View repository →
+              </a>
             </p>
           </article>
 
           <article class="card">
-            <h3>Observability</h3>
+            <h3>CI/CD Pipeline Templates</h3>
             <p>
-              CloudWatch, Azure Monitor, Prometheus, Grafana, logging, alerting,
-              and infrastructure health monitoring.
+              Reusable CI/CD pipeline templates for automated build, test,
+              deployment, and release workflows.
+            </p>
+            <p class="project-link">
+              <a
+                href="https://github.com/Satyavb9843/cicd-pipeline-templates"
+                target="_blank"
+                rel="noopener"
+              >
+                View repository →
+              </a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>DevOps Automation Scripts</h3>
+            <p>
+              Python and Bash scripts for cloud operations, deployment automation,
+              maintenance, and administration tasks.
+            </p>
+            <p class="project-link">
+              <a
+                href="https://github.com/Satyavb9843/devops-automation-scripts"
+                target="_blank"
+                rel="noopener"
+              >
+                View repository →
+              </a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Observability Monitoring Stack</h3>
+            <p>
+              Monitoring and observability setup using Prometheus, Grafana,
+              dashboards, alerting, logging, and infrastructure metrics.
+            </p>
+            <p class="project-link">
+              <a
+                href="https://github.com/Satyavb9843/observability-monitoring-stack"
+                target="_blank"
+                rel="noopener"
+              >
+                View repository →
+              </a>
             </p>
           </article>
         </div>
@@ -622,7 +698,7 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-label">EXPERIENCE</p>
-          <h2>Professional roles and responsibilities</h2>
+          <h2>Professional experience</h2>
         </div>
 
         <div class="timeline">
@@ -631,13 +707,12 @@
             <p class="job-meta">Contract · Hybrid · Chicago, IL</p>
             <span class="job-date">Jan 2026 – Present</span>
             <ul>
-              <li>Engineer Azure and AWS cloud infrastructure for production and non-production business applications.</li>
+              <li>Engineer Azure and AWS cloud infrastructure for production and non-production applications.</li>
               <li>Provision infrastructure through Terraform and ARM Templates to standardize configuration management.</li>
-              <li>Administer Azure VMs, Storage, Azure AD, Azure Monitor, VNets, subnets, NSGs, route tables, load balancers, and private endpoints.</li>
-              <li>Manage AWS EC2, S3, IAM, VPC, Lambda, and CloudWatch resources for provisioning, monitoring, and troubleshooting.</li>
-              <li>Automate operations with PowerShell, Python, Azure CLI, AWS CLI, and Informatica IICS.</li>
-              <li>Investigate incidents, perform RCA, and resolve infrastructure, data-pipeline, and application issues.</li>
-              <li>Reduced provisioning time by about 60% and incident detection time by about 35%.</li>
+              <li>Administer Azure VMs, Storage, Azure AD, Azure Monitor, VNets, NSGs, load balancers, and private endpoints.</li>
+              <li>Manage AWS EC2, S3, IAM, VPC, Lambda, and CloudWatch resources.</li>
+              <li>Automate operations with PowerShell, Python, Azure CLI, and AWS CLI.</li>
+              <li>Investigate incidents, perform RCA, and resolve infrastructure and data-pipeline issues.</li>
             </ul>
           </article>
 
@@ -646,15 +721,12 @@
             <p class="job-meta">Contract · Remote · Minneapolis, MN</p>
             <span class="job-date">Jan 2025 – Dec 2025</span>
             <ul>
-              <li>Supported mission-critical AWS and Azure compute, storage, networking, and monitoring environments.</li>
-              <li>Designed and maintained CI/CD pipelines with Jenkins, GitHub, AWS CodePipeline, and AWS CodeBuild.</li>
+              <li>Supported production AWS and Azure compute, storage, networking, and monitoring environments.</li>
+              <li>Built and maintained CI/CD pipelines with Jenkins, GitHub, AWS CodePipeline, and AWS CodeBuild.</li>
               <li>Containerized applications with Docker and deployed workloads to Amazon EKS.</li>
-              <li>Provisioned infrastructure with Terraform and infrastructure-as-code practices.</li>
-              <li>Implemented IAM roles, security groups, and cross-account controls for least-privilege access.</li>
-              <li>Monitored workloads with CloudWatch, CloudTrail, Azure Monitor, Prometheus, and Grafana.</li>
-              <li>Managed Helm and ArgoCD Kubernetes deployments across EKS and GKE, including rollouts and rollbacks.</li>
-              <li>Automated Python and Bash workflows, reducing deployment time by about 50% and manual effort by about 40%.</li>
-              <li>Supported Informatica PowerCenter and IICS ETL workflows and production issue resolution.</li>
+              <li>Provisioned infrastructure using Terraform and infrastructure-as-code practices.</li>
+              <li>Monitored workloads using CloudWatch, Azure Monitor, Prometheus, and Grafana.</li>
+              <li>Managed Helm and ArgoCD Kubernetes deployments, including rollouts and rollbacks.</li>
             </ul>
           </article>
 
@@ -663,15 +735,12 @@
             <p class="job-meta">Full time · Telangana, India</p>
             <span class="job-date">Jun 2020 – Mar 2023</span>
             <ul>
-              <li>Built CI/CD pipelines with Jenkins, GitHub Actions, AWS CodePipeline, and AWS CodeBuild for development, QA, and production.</li>
-              <li>Provisioned and managed EC2, S3, IAM, VPC, Auto Scaling, ELB, Route 53, and CloudWatch.</li>
-              <li>Containerized applications with Docker and orchestrated deployments on EKS and GKE.</li>
+              <li>Built CI/CD pipelines with Jenkins, GitHub Actions, AWS CodePipeline, and AWS CodeBuild.</li>
+              <li>Provisioned AWS services including EC2, S3, IAM, VPC, Auto Scaling, ELB, Route 53, and CloudWatch.</li>
+              <li>Containerized applications with Docker and supported EKS and GKE deployments.</li>
               <li>Automated provisioning and configuration using Terraform and Ansible.</li>
-              <li>Managed Git and GitHub branching, pull requests, code reviews, and version-control practices.</li>
-              <li>Implemented CloudWatch, Prometheus, Grafana, and Zabbix monitoring and logging.</li>
-              <li>Configured IAM, security groups, Azure RBAC, and HashiCorp Vault for access and secret management.</li>
-              <li>Supported incident response, RCA, ServiceNow tickets, and change and release management.</li>
-              <li>Reduced manual deployment effort by about 55% and release time by about 45% with Python and Bash automation.</li>
+              <li>Implemented CloudWatch, Prometheus, Grafana, and Zabbix monitoring and alerting.</li>
+              <li>Supported incident response, root-cause analysis, ServiceNow tickets, and release management.</li>
             </ul>
           </article>
 
@@ -681,10 +750,9 @@
             <span class="job-date">May 2019 – May 2020</span>
             <ul>
               <li>Installed, configured, and administered RHEL 7/8 servers in production environments.</li>
-              <li>Managed LVM, disk partitions, file systems, storage allocation, SSH, SFTP, Apache, NFS, and Samba.</li>
+              <li>Managed LVM, disk partitions, file systems, storage, SSH, SFTP, Apache, NFS, and Samba.</li>
               <li>Performed OS patching, package management, installation, and maintenance with YUM and RPM.</li>
-              <li>Automated routine administration with Bash and Cron.</li>
-              <li>Assisted with Linux, VMware, storage, and network troubleshooting.</li>
+              <li>Automated recurring Linux administration tasks using Bash and Cron.</li>
             </ul>
           </article>
         </div>
@@ -695,7 +763,7 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-label">EDUCATION</p>
-          <h2>Academic background</h2>
+          <h2>Education</h2>
         </div>
 
         <div class="education-grid">
@@ -738,22 +806,14 @@
 
           <article class="contact-card">
             <h3>LinkedIn</h3>
-            <a
-              href="https://linkedin.com/in/satya-v88"
-              target="_blank"
-              rel="noopener"
-            >
+            <a href="https://linkedin.com/in/satya-v88" target="_blank" rel="noopener">
               linkedin.com/in/satya-v88
             </a>
           </article>
 
           <article class="contact-card">
             <h3>GitHub</h3>
-            <a
-              href="https://github.com/Satyavb9843"
-              target="_blank"
-              rel="noopener"
-            >
+            <a href="https://github.com/Satyavb9843" target="_blank" rel="noopener">
               github.com/Satyavb9843
             </a>
           </article>
